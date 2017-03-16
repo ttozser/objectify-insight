@@ -90,7 +90,7 @@ public class TablePicker {
 					log.finest("Table " + tableId + " already exists");    // Do nothing more
 				else
 					throw e;
-			}
+				}
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
@@ -102,6 +102,8 @@ public class TablePicker {
 		fields.add(tableFieldSchema("uploaded", "TIMESTAMP"));
 		fields.add(tableFieldSchema("codepoint", "STRING"));
 		fields.add(tableFieldSchema("namespace", "STRING"));
+		fields.add(tableFieldSchema("service", "STRING"));
+		fields.add(tableFieldSchema("version", "STRING"));
 		fields.add(tableFieldSchema("kind", "STRING"));
 		fields.add(tableFieldSchema("op", "STRING"));
 		fields.add(tableFieldSchema("query", "STRING"));
